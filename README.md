@@ -56,3 +56,14 @@ i made the following changes in image-scan.yaml
 
 `oc create secret generic acstoken --from-literal=token=<pasted_token>`
 
+The pipeline fails with at the scan stage because:
+
+ Image quay.io/jrickard0/chat-client:latest failed policy 'Fixable Severity at least Important' (policy enforcement caused failure)
+- Description:
+    ↳ Alert on deployments with fixable vulnerabilities with a Severity Rating at
+      least Important
+
+
+Changed the install-without-buildah.yaml task file to change the 
+image name to my repo
+
