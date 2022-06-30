@@ -61,13 +61,11 @@ spec:
     runAfter: 
       - build-from-source
   - name: rollout-latest-image
+    params:
+    - name: SCRIPT
+      value: oc import-image $(params.is-name):latest
     taskRef: 
       name: openshift-client
       kind: ClusterTask
-    params:
-      - name: ARGS
-        value:
-          - import-image
-          - $(params.is-name):latest
     runAfter:
       - build-image
