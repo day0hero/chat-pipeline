@@ -11,24 +11,21 @@ spec:
     - name: "context-dir"
       value: "/"
     - name: "image-name"
-      value: "quay.io/smileyfritz/chat-client:latest"
+      value: "quay.io/jrickard0/chat-client:latest"
     - name: "is-name"
       value: "chat-client"
     - name: "acs-image"
-      value: "quay.io/smileyfritz/chat-client:latest"
+      value: "quay.io/jrickard0/chat-client:latest"
     - name: "acs-scan-api"
-      value: "central-stackrox.apps.cluster-n9jcv.n9jcv.sandbox1356.opentlc.com"
+      value: "central-rhacs-operator.apps.jrickard-dsohub.blueprints.rhecoeng.com"
   pipelineRef:
     name: build-scan-and-deploy
   podTemplate:
-      securityContext:
-        runAsUser: 0
-        fsGroup: 0
       volumes:
         - name: varlibcontainers
           persistentVolumeClaim:
             claimName: containers-pvc
-  serviceAccountName: pipeline-svc
+  serviceAccountName: pipeline
   workspaces:
     - name: source
       persistentVolumeClaim:
