@@ -12,7 +12,7 @@ spec:
       default: 'true'
     - name: IMAGE
       type: string
-      default: 'quay.io/smileyfritz/chat-client'
+      default: 'quay.io/jrickard0/chat-client'
     - name: DOCKERFILE
       type: string
       default: ./Dockerfile
@@ -21,14 +21,14 @@ spec:
       default: .
   steps:
   - name: install
-    image: quay.io/smileyfritz/ubi-npm:latest
+    image: quay.io/jrickard0/ubi-npm:latest
     command:
     - /usr/bin/npm
     args:
     - install
     workingDir: $(workspaces.output.path)
   - name: build
-    image: quay.io/smileyfritz/ubi-npm:latest
+    image: quay.io/jrickard0/ubi-npm:latest
     command:
     - /usr/bin/npm
     args:
