@@ -32,3 +32,7 @@ I changed the pvc size from 2Gib to 5Gib
 I had to change the filesystem in buildah-vols.yaml from `overlay` to `vfs`
 
 Added rolebinding.yaml
+
+
+### build-and-deploy pipeline
+![build-and-deploy-pipeline](build-and-deploy-pipeline-run.png)
