@@ -36,3 +36,4 @@ Added rolebinding.yaml
 
 ### build-and-deploy pipeline
 ![build-and-deploy-pipeline](./images/build-and-deploy-pipeline-run.png)
+![build-and-deploy-pipeline](images/build-and-deploy-pipeline-run.png)
