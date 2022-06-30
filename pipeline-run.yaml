@@ -11,21 +11,18 @@ spec:
     - name: "context-dir"
       value: "/"
     - name: "image-name" 
-      value: "quay.io/smileyfritz/chat-client:latest"
+      value: "quay.io/jrickard0/chat-client:latest"
     - name: "is-name"
       value: "chat-client"
   pipelineRef:
     name: build-and-deploy
   podTemplate:
-      securityContext:
-        runAsUser: 0
-        fsGroup: 0
       volumes:
         - name: varlibcontainers
           persistentVolumeClaim:
-            claimName: containers-pvc2
-  serviceAccountName: pipeline-svc
+            claimName: containers-pvc
+  serviceAccountName: pipeline
   workspaces:
     - name: source
       persistentVolumeClaim:
-        claimName: pipeline-pvc1
+        claimName: pipeline-pvc
