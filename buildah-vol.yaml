@@ -66,8 +66,6 @@ spec:
     volumeMounts:
     - name: varlibcontainers
       mountPath: /var/lib/containers
-    securityContext:
-      privileged: true
 
   - name: push
     image: $(params.BUILDER_IMAGE)
@@ -80,8 +78,6 @@ spec:
     volumeMounts:
     - name: varlibcontainers
       mountPath: /var/lib/containers
-    securityContext:
-      privileged: true
 
   - name: digest-to-results
     image: $(params.BUILDER_IMAGE)
