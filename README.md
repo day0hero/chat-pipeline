@@ -36,3 +36,23 @@ Added rolebinding.yaml
 
 ### build-and-deploy pipeline
 ![build-and-deploy-pipeline](./images/build-and-deploy-pipeline-run.png)
+
+
+## build-deploy-scan
+i made the following changes to pipeline-with-acs-scan.yaml
+- added namespace: devsecops
+- updated image name to use my repository in quay
+- added `--confirm` to the end of image-import
+
+i made the following changes in pipeline-run-with-scan
+- updated images repositories
+- using service account pipeline
+- updated acs-scan-api to my acs instance
+
+i made the following changes in image-scan.yaml
+- updated image repositories
+- pulled, tagged, pushed roxctl image to quay
+- created a secret for acstoken
+
+`oc create secret generic acstoken --from-literal=token=<pasted_token>`
+
