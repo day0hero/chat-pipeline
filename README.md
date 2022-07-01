@@ -72,7 +72,6 @@ Modified the cosign-pipeline with image from my repo.
 cosign-pipelinerun:
 - removed the following block from pipelinerun
 ```yaml
-  podTemplate:
       securityContext:
         runAsUser: 0
         fsGroup: 0

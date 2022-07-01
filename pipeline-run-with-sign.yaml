@@ -16,6 +16,7 @@ spec:
       value: "chat-client"
   pipelineRef:
     name: build-and-sign
+  podTemplate:
       volumes:
         - name: varlibcontainers
           persistentVolumeClaim:
