@@ -47,7 +47,7 @@ spec:
       name: buildah-with-vols
     params:
       - name: IMAGE
-        value: 'quay.io/smileyfritz/chat-client'
+        value: 'quay.io/jrickard0/chat-client'
       - name: CONTEXT
         value: '.'
       - name: TLSVERIFY

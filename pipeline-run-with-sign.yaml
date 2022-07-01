@@ -11,7 +11,7 @@ spec:
     - name: "context-dir"
       value: "/"
     - name: "image-name"
-      value: "quay.io/smileyfritz/chat-client:latest"
+      value: "quay.io/jrickard0/chat-client:latest"
     - name: "is-name"
       value: "chat-client"
   pipelineRef:
@@ -24,7 +24,7 @@ spec:
         - name: varlibcontainers
           persistentVolumeClaim:
             claimName: containers-pvc
-  serviceAccountName: pipeline-svc
+  serviceAccountName: pipeline
   workspaces:
     - name: source
       persistentVolumeClaim:

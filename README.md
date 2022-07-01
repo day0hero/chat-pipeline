@@ -67,3 +67,5 @@ The pipeline fails with at the scan stage because:
 Changed the install-without-buildah.yaml task file to change the 
 image name to my repo
 
+Modified the cosign-pipeline with image from my repo.
+
